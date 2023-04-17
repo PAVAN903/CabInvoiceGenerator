@@ -3,7 +3,8 @@ package com.bridgelab;
 import java.util.Scanner;
 
 public class Main {
-	 static double totalfare=0;
+	 static double totalfare;
+	 static String result;
 
 	public static void main(String[] args) {
 		CabInvoiceGenerator cabinvoice=new CabInvoiceGenerator();
@@ -15,9 +16,9 @@ public class Main {
 		double distance=sc.nextDouble();
 		System.out.println("enter the time travelled");
 		double timeInminute=sc.nextDouble();
-		 totalfare=cabinvoice.calculateFare(distance, timeInminute);
-		}
-		System.out.println("Total fare is : "+totalfare);
+		result=cabinvoice.calculateFare(distance, timeInminute, rides);
+		} 
+		System.out.println(result);
 	}
 
 }
